@@ -103,7 +103,7 @@ const EmailManagement = () => {
     ];
 
     return (
-        <div className="min-h-screen bg-black text-white font-sans selection:bg-blue-500/30">
+        <div className="min-h-screen bg-black text-white font-sans selection:bg-blue-500/30 overflow-x-hidden">
             <Header />
 
             {/* Hero Section */}

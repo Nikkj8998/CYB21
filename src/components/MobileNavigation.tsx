@@ -61,16 +61,24 @@ const MobileNavigation = ({
       icon: Cloud,
       path: "/cloud-solutions",
       services: [
-        { name: "Web & Email Hosting", hash: "" },
-        { name: "VPS & Dedicated Hosting", hash: "" },
-        { name: "Cloud Infrastructure (Azure, AWS, GCP)", hash: "" },
-        { name: "Backup & Disaster Recovery", hash: "" },
-        { name: "Cloud Security & Cost Optimization", hash: "" },
-        { name: "Domain Registration & SSL", hash: "" },
-        { name: "Microsoft 365 Licensing & Setup", hash: "" },
-        { name: "Email Migration", hash: "" },
-        { name: "SharePoint & OneDrive Setup", hash: "" },
-        { name: "Teams Implementation & Training", hash: "" },
+        { name: "Cloud Architecture & Deployment", hash: "cloud-architecture-deployment" },
+        { name: "Cloud Migration", hash: "cloud-migration" },
+        { name: "Hybrid & Multi-Cloud Solutions", hash: "hybrid-multi-cloud-solutions" },
+        { name: "Managed Cloud Services", hash: "managed-cloud-services" },
+        { name: "Cloud Security", hash: "cloud-security" },
+        { name: "Auto-Scaling & High Availability", hash: "auto-scaling-high-availability" },
+        { name: "Web & Email Hosting", hash: "web-email-hosting" },
+        { name: "VPS & Dedicated Hosting", hash: "vps-dedicated-hosting" },
+        { name: "Cloud Infrastructure (Azure, AWS, GCP)", hash: "cloud-infrastructure" },
+        { name: "Backup & Disaster Recovery", hash: "backup-disaster-recovery" },
+        { name: "Domain Registration & SSL", hash: "domain-registration-ssl" },
+        { name: "Microsoft 365 Licensing & Setup", hash: "microsoft-365-licensing-setup" },
+        { name: "Email Migration", hash: "email-migration" },
+        { name: "SharePoint & OneDrive Setup", hash: "sharepoint-onedrive-setup" },
+        { name: "Teams Implementation & Training", hash: "teams-implementation-training" },
+        { name: "Data Security & Compliance", hash: "data-security-compliance" },
+        { name: "Ongoing M365 Admin & Support", hash: "ongoing-m365-admin-support" },
+        { name: "Professional Email Management", path: "/email-management" },
       ]
     },
     {
@@ -93,15 +101,23 @@ const MobileNavigation = ({
       icon: Network,
       path: "/managed-services",
       services: [
-        { name: "Windows & Linux Deployment", hash: "" },
-        { name: "Virtualization (VMware, Hyper-V)", hash: "" },
-        { name: "Server Migration & Upgrades", hash: "" },
-        { name: "LAN/WAN Setup & Management", hash: "" },
-        { name: "Firewall Configuration", hash: "" },
-        { name: "VPN & Remote Connectivity", hash: "" },
-        { name: "Network Monitoring & Optimization", hash: "" },
-        { name: "Datacenter Setup", hash: "" },
-        { name: "SAN/NAS Storage Solutions", hash: "" },
+        { name: "Windows & Linux Deployment", hash: "windows-linux-deployment" },
+        { name: "Virtualization (VMware, Hyper-V)", hash: "virtualization" },
+        { name: "Server Migration & Upgrades", hash: "server-migration-upgrades" },
+        { name: "Performance & Optimization", hash: "performance-optimization" },
+        { name: "Security Hardening", hash: "security-hardening" },
+        { name: "24/7 Server Maintenance", hash: "24-7-server-maintenance" },
+        { name: "LAN/WAN Setup & Management", hash: "lan-wan-setup-management" },
+        { name: "Firewall Configuration", hash: "firewall-configuration" },
+        { name: "VPN & Remote Connectivity", hash: "vpn-remote-connectivity" },
+        { name: "Structured Cabling", hash: "structured-cabling" },
+        { name: "Network Monitoring & Optimization", hash: "network-monitoring-optimization" },
+        { name: "Wireless Deployment", hash: "wireless-deployment" },
+        { name: "Datacenter Setup", hash: "datacenter-setup" },
+        { name: "VDI", hash: "vdi" },
+        { name: "SAN/NAS Storage Solutions", hash: "san-nas-storage-solutions" },
+        { name: "Network Operations Center (NOC)", hash: "network-operations-center" },
+        { name: "Infra Monitoring & Optimization", hash: "infra-monitoring-optimization" },
       ]
     },
     {
@@ -110,14 +126,18 @@ const MobileNavigation = ({
       icon: Laptop,
       path: "/computer-amc-services",
       services: [
-        { name: "Preventive & Corrective Maintenance", hash: "" },
-        { name: "Hardware & Software Support", hash: "" },
-        { name: "Onsite & Remote Support", hash: "" },
-        { name: "SLA Driven Services", hash: "" },
-        { name: "Helpdesk & Ticketing", hash: "" },
-        { name: "RMM Monitoring", hash: "" },
-        { name: "Antivirus & Malware Removal", hash: "" },
-        { name: "OS/Software Installations", hash: "" },
+        { name: "Preventive & Corrective Maintenance", hash: "preventive-corrective-maintenance" },
+        { name: "Hardware & Software Support", hash: "hardware-software-support" },
+        { name: "Security Patches", hash: "security-patches" },
+        { name: "Onsite & Remote Support", hash: "onsite-remote-support" },
+        { name: "SLA Driven Services", hash: "sla-driven-services" },
+        { name: "Quarterly Performance Review", hash: "quarterly-performance-review" },
+        { name: "Helpdesk & Ticketing", hash: "helpdesk-ticketing" },
+        { name: "Troubleshooting (Desktop, Laptop, Printers)", hash: "troubleshooting" },
+        { name: "RMM Monitoring", hash: "rmm-monitoring" },
+        { name: "Antivirus & Malware Removal", hash: "antivirus-malware-removal" },
+        { name: "OS/Software Installations", hash: "os-software-installations" },
+        { name: "Remote Tuning & Fixes", hash: "remote-tuning-fixes" },
       ]
     },
     {
@@ -149,6 +169,7 @@ const MobileNavigation = ({
         { name: "SLA Reporting", hash: "sla-reporting" },
         { name: "Asset & Configuration Management", hash: "asset-configuration-management" },
         { name: "Knowledge Base Setup", hash: "knowledge-base-setup" },
+        { name: "Managed IT Support India", path: "/managed-it-support" },
         { name: "IT Strategy & Roadmap", hash: "it-strategy-roadmap" },
         { name: "Technology Gap Analysis", hash: "technology-gap-analysis" },
         { name: "Digital Transformation", hash: "digital-transformation" },
@@ -158,7 +179,7 @@ const MobileNavigation = ({
         { name: "Risk Management Audits", hash: "risk-management-audits" },
         { name: "License & Asset Compliance", hash: "license-asset-compliance" },
         { name: "Cybersecurity Assessments", hash: "cybersecurity-assessments" },
-        { name: "Regulatory Compliance (PCI-DSS, SOC 2)", hash: "regulatory-compliance" },
+        { name: "Regulatory Compliance (PCI-DSS, SOC 2, etc.)", hash: "regulatory-compliance" },
       ]
     },
     {
@@ -214,7 +235,7 @@ const MobileNavigation = ({
 
   return (
     <Sheet open={isOpen} onOpenChange={onToggle}>
-      <SheetContent side="right" className="w-80 bg-black border-gray-800 p-0 flex flex-col">
+      <SheetContent side="right" className="w-80 bg-black border-gray-800 p-0 flex flex-col z-[100]">
         <SheetHeader className="px-6 py-4 border-b border-gray-800 flex-shrink-0">
           <div className="flex items-center justify-between">
             <SheetTitle className="text-white text-lg font-bold">
@@ -255,11 +276,11 @@ const MobileNavigation = ({
                     <CollapsibleContent className="bg-gray-900/80">
                       {category.services.map((service, index) => {
                         const serviceName = typeof service === 'string' ? service : service.name;
-                        const serviceHash = typeof service === 'string' ? '' : `#${service.hash}`;
+                        const servicePath = (service as any).path || `${category.path}${typeof service === 'string' ? '' : `#${service.hash}`}`;
                         return (
                           <Link
                             key={index}
-                            to={`${category.path}${serviceHash}`}
+                            to={servicePath}
                             onClick={handleMenuItemClick}
                             className="block px-10 py-2 text-xs text-gray-400 hover:text-[#14539a] hover:bg-white/5 transition-colors touch-target"
                           >
