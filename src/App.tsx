@@ -32,6 +32,7 @@ import Product from "./pages/Product";
 import Agile from "./pages/Agile";
 import ITSM from "./pages/ITSM";
 import EmailManagement from "./pages/EmailManagement";
+import ManagedITSupport from "./pages/ManagedITSupport";
 
 import { AdminAuthProvider } from "./admin/contexts/AdminAuthContext";
 import { AdminLogin } from "./admin/pages/AdminLogin";
@@ -78,6 +79,7 @@ const App = () => (
               <Route path="/agile" element={<Agile />} />
               <Route path="/itsm" element={<ITSM />} />
               <Route path="/email-management" element={<EmailManagement />} />
+              <Route path="/managed-it-support" element={<ManagedITSupport />} />
               <Route path="/about" element={<About />} />
               <Route path="/leadership" element={<Leadership />} />
               <Route path="/awards" element={<Leadership />} />

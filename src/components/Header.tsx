@@ -358,6 +358,11 @@ const Header = () => {
               name: "Regulatory Compliance (PCI-DSS, SOC 2, etc.)",
               hash: "regulatory-compliance",
             },
+
+            {
+              name: "Managed IT Support India",
+              path: "/managed-it-support",
+            },
           ],
         },
       },
@@ -408,7 +413,6 @@ const Header = () => {
     <div className="sticky top-0 z-50 w-full">
       {/* Republic 2026 Banner */}
 
-
       {/* Main Header */}
       <header className="w-full bg-white border-b border-gray-200 text-black shadow-sm">
         <div className="container flex h-16 md:h-20 items-center justify-between mobile-padding">
@@ -433,7 +437,11 @@ const Header = () => {
               asChild
               className="border border-green-700 text-green-700 bg-green-100 hover:bg-green-700 hover:text-white font-semibold px-3 py-1.5 rounded-full transition-all duration-200 flex items-center gap-2 text-xs md:text-sm"
             >
-              <Link to="/offers" onClick={handleMenuItemClick} className="flex items-center gap-2">
+              <Link
+                to="/offers"
+                onClick={handleMenuItemClick}
+                className="flex items-center gap-2"
+              >
                 <BadgePercent className="w-4 h-4" />
                 Get Offer
               </Link>
@@ -491,8 +499,8 @@ const Header = () => {
                               setActiveServiceCategory(category.id)
                             }
                             className={`flex items-center justify-between px-3 py-2 rounded-md cursor-pointer transition-colors no-underline ${activeServiceCategory === category.id
-                              ? "bg-[#14539a] text-white"
-                              : "text-gray-700 hover:bg-gray-100"
+                                ? "bg-[#14539a] text-white"
+                                : "text-gray-700 hover:bg-gray-100"
                               }`}
                           >
                             <div className="flex items-center gap-2.5">
@@ -595,8 +603,12 @@ const Header = () => {
                                       : (service as any).name;
                                   const servicePath =
                                     typeof service === "string"
-                                      ? `${activeCategory.path}#${service.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
-                                      : (service as any).path || `${activeCategory.path}#${(service as any).hash}`;
+                                      ? `${activeCategory.path}#${service
+                                        .toLowerCase()
+                                        .replace(/[^a-z0-9]+/g, "-")
+                                        .replace(/(^-|-$)/g, "")}`
+                                      : (service as any).path ||
+                                      `${activeCategory.path}#${(service as any).hash}`;
 
                                   return (
                                     <Link
@@ -615,7 +627,10 @@ const Header = () => {
                           {activeCategory.threeColumnServices.column4 && (
                             <div>
                               <h4 className="text-xs font-semibold text-gray-800 mb-2">
-                                {activeCategory.threeColumnServices.column4.title}
+                                {
+                                  activeCategory.threeColumnServices.column4
+                                    .title
+                                }
                               </h4>
                               <div className="space-y-1">
                                 {activeCategory.threeColumnServices.column4.items.map(
@@ -681,8 +696,12 @@ const Header = () => {
                                       : (service as any).name;
                                   const servicePath =
                                     typeof service === "string"
-                                      ? `${activeCategory.path}#${service.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
-                                      : (service as any).path || `${activeCategory.path}#${(service as any).hash}`;
+                                      ? `${activeCategory.path}#${service
+                                        .toLowerCase()
+                                        .replace(/[^a-z0-9]+/g, "-")
+                                        .replace(/(^-|-$)/g, "")}`
+                                      : (service as any).path ||
+                                      `${activeCategory.path}#${(service as any).hash}`;
 
                                   return (
                                     <Link
@@ -701,7 +720,10 @@ const Header = () => {
                           {activeCategory.threeColumnServices.column4 && (
                             <div>
                               <h4 className="text-xs font-semibold text-gray-800 mb-2">
-                                {activeCategory.threeColumnServices.column4.title}
+                                {
+                                  activeCategory.threeColumnServices.column4
+                                    .title
+                                }
                               </h4>
                               <div className="space-y-1">
                                 {activeCategory.threeColumnServices.column4.items.map(
@@ -896,7 +918,6 @@ const Header = () => {
                 Get Offer
               </a>
             </Button>
-
 
             <Button
               variant="default"
