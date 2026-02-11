@@ -118,9 +118,6 @@ const EmailManagement = () => {
                         alt="Email Management Background"
                         className="w-full h-full object-cover opacity-30 scale-105"
                     />
-                    {/* Animated Grid Overlay like Index */}
-                    <div className="absolute inset-0 bg-[linear-gradient(rgba(0,150,255,0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,150,255,0.1)_1px,transparent_1px)] bg-[size:50px_50px] [mask-image:radial-gradient(ellipse_at_center,black_70%,transparent_100%)]"></div>
-
                     <div className="absolute inset-0 bg-gradient-to-b from-black via-black/40 to-black"></div>
 
                     {/* Floating Glows */}
@@ -129,15 +126,15 @@ const EmailManagement = () => {
                 </div>
 
                 <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
-                    <div className={`transition-all duration-1000 ${heroInView ? "animate-fade-in" : "opacity-0 translate-y-20"}`}>
+                    <div className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
                         <Badge className="mb-6 px-4 py-1.5 bg-blue-500/10 text-blue-400 border-blue-500/20 text-sm uppercase tracking-wider font-semibold backdrop-blur-md">
                             Professional Email Management for Indian Businesses
                         </Badge>
-                        <h1 className="main-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-balance leading-tight px-4 tracking-tight">
-                            <span className="line line-first text-white block">
+                        <h1 className="main-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-balance leading-tight px-4 tracking-tight overflow-hidden">
+                            <span className={`line line-first text-white block transition-all duration-700 delay-300 ${heroInView ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"}`}>
                                 ENTERPRISE-GRADE
                             </span>
-                            <span className="line line-second text-blue-400 mt-4 md:mt-5 block drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+                            <span className={`line line-second text-blue-400 mt-4 md:mt-5 block drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-700 delay-500 ${heroInView ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"}`}>
                                 EMAIL OPERATIONS
                             </span>
                         </h1>
