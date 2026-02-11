@@ -163,6 +163,15 @@ const Header = () => {
             "Ongoing M365 Admin & Support",
           ],
         },
+        column4: {
+          title: "Email Management",
+          items: [
+            {
+              name: "Professional Email Management",
+              path: "/email-management",
+            },
+          ],
+        },
       },
     },
     {
@@ -584,17 +593,15 @@ const Header = () => {
                                     typeof service === "string"
                                       ? service
                                       : (service as any).name;
-                                  const serviceHash =
+                                  const servicePath =
                                     typeof service === "string"
-                                      ? service
-                                        .toLowerCase()
-                                        .replace(/[^a-z0-9]+/g, "-")
-                                        .replace(/(^-|-$)/g, "")
-                                      : (service as any).hash;
+                                      ? `${activeCategory.path}#${service.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
+                                      : (service as any).path || `${activeCategory.path}#${(service as any).hash}`;
+
                                   return (
                                     <Link
                                       key={index}
-                                      to={`${activeCategory.path}#${serviceHash}`}
+                                      to={servicePath}
                                       onClick={handleMenuItemClick}
                                       className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
                                     >
@@ -605,6 +612,27 @@ const Header = () => {
                               )}
                             </div>
                           </div>
+                          {activeCategory.threeColumnServices.column4 && (
+                            <div>
+                              <h4 className="text-xs font-semibold text-gray-800 mb-2">
+                                {activeCategory.threeColumnServices.column4.title}
+                              </h4>
+                              <div className="space-y-1">
+                                {activeCategory.threeColumnServices.column4.items.map(
+                                  (service: any, index: number) => (
+                                    <Link
+                                      key={index}
+                                      to={service.path}
+                                      onClick={handleMenuItemClick}
+                                      className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  ),
+                                )}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       ) : activeCategory.twoColumnServices ? (
                         <div className="grid grid-cols-2 gap-4">
@@ -651,17 +679,15 @@ const Header = () => {
                                     typeof service === "string"
                                       ? service
                                       : (service as any).name;
-                                  const serviceHash =
+                                  const servicePath =
                                     typeof service === "string"
-                                      ? service
-                                        .toLowerCase()
-                                        .replace(/[^a-z0-9]+/g, "-")
-                                        .replace(/(^-|-$)/g, "")
-                                      : (service as any).hash;
+                                      ? `${activeCategory.path}#${service.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "")}`
+                                      : (service as any).path || `${activeCategory.path}#${(service as any).hash}`;
+
                                   return (
                                     <Link
                                       key={index}
-                                      to={`${activeCategory.path}#${serviceHash}`}
+                                      to={servicePath}
                                       onClick={handleMenuItemClick}
                                       className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
                                     >
@@ -672,6 +698,27 @@ const Header = () => {
                               )}
                             </div>
                           </div>
+                          {activeCategory.threeColumnServices.column4 && (
+                            <div>
+                              <h4 className="text-xs font-semibold text-gray-800 mb-2">
+                                {activeCategory.threeColumnServices.column4.title}
+                              </h4>
+                              <div className="space-y-1">
+                                {activeCategory.threeColumnServices.column4.items.map(
+                                  (service: any, index: number) => (
+                                    <Link
+                                      key={index}
+                                      to={service.path}
+                                      onClick={handleMenuItemClick}
+                                      className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
+                                    >
+                                      {service.name}
+                                    </Link>
+                                  ),
+                                )}
+                              </div>
+                            </div>
+                          )}
                         </div>
                       ) : (
                         <div className="grid grid-cols-2 gap-x-8 gap-y-2">
