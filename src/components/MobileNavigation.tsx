@@ -20,7 +20,7 @@ const MobileNavigation = ({
   const [openServiceCategory, setOpenServiceCategory] = useState<string | null>(null);
   const location = useLocation();
   const isActive = (path: string) => location.pathname === path;
-  
+
   const handleResourcesClick = () => {
     if (location.pathname === "/resources") {
       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -225,7 +225,7 @@ const MobileNavigation = ({
             </Button>
           </div>
         </SheetHeader>
-        
+
         <nav className="flex flex-col py-2 overflow-y-auto flex-1 mobile-nav-scrollbar">
           {/* Services Menu */}
           <div className="mb-1">
@@ -238,24 +238,18 @@ const MobileNavigation = ({
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-0 bg-gray-900/50">
                 {serviceCategories.map((category) => (
-                  <Collapsible 
-                    key={category.id} 
-                    open={openServiceCategory === category.id} 
+                  <Collapsible
+                    key={category.id}
+                    open={openServiceCategory === category.id}
                     onOpenChange={() => toggleServiceCategory(category.id)}
                   >
                     <CollapsibleTrigger asChild>
-                      <div className="w-full">
-                        <Link
-                          to={category.path}
-                          onClick={handleMenuItemClick}
-                          className="w-full flex justify-between px-7 py-2.5 text-left text-gray-300 hover:text-white hover:bg-white/5 transition-colors no-underline touch-target"
-                        >
-                          <div className="flex items-center gap-2">
-                            <category.icon className="h-4 w-4 text-[#14539a]/70" />
-                            <span className="text-sm">{category.name}</span>
-                          </div>
-                          <ChevronDown className={`h-3 w-3 transition-transform ${openServiceCategory === category.id ? 'rotate-180' : ''}`} />
-                        </Link>
+                      <div className="w-full flex justify-between px-7 py-2.5 text-left text-gray-300 hover:text-white hover:bg-white/5 transition-colors no-underline touch-target cursor-pointer">
+                        <div className="flex items-center gap-2">
+                          <category.icon className="h-4 w-4 text-[#14539a]/70" />
+                          <span className="text-sm">{category.name}</span>
+                        </div>
+                        <ChevronDown className={`h-3 w-3 transition-transform ${openServiceCategory === category.id ? 'rotate-180' : ''}`} />
                       </div>
                     </CollapsibleTrigger>
                     <CollapsibleContent className="bg-gray-900/80">
@@ -263,7 +257,7 @@ const MobileNavigation = ({
                         const serviceName = typeof service === 'string' ? service : service.name;
                         const serviceHash = typeof service === 'string' ? '' : `#${service.hash}`;
                         return (
-                          <Link 
+                          <Link
                             key={index}
                             to={`${category.path}${serviceHash}`}
                             onClick={handleMenuItemClick}
@@ -273,8 +267,8 @@ const MobileNavigation = ({
                           </Link>
                         );
                       })}
-                      <Link 
-                        to={category.path} 
+                      <Link
+                        to={category.path}
                         onClick={onToggle}
                         className="block px-10 py-2 text-xs text-[#14539a] font-medium hover:bg-white/5 transition-colors touch-target"
                       >
@@ -299,9 +293,9 @@ const MobileNavigation = ({
               <CollapsibleContent className="space-y-0 bg-gray-900/50">
                 {industries.map((industry, index) => (
                   <li key={index} className="list-none">
-                    <Link 
+                    <Link
                       to={`/industries#${industry.hash}`}
-                      onClick={handleMenuItemClick} 
+                      onClick={handleMenuItemClick}
                       className="block px-7 py-2 text-sm transition-colors touch-target text-gray-300 hover:text-white hover:bg-white/5"
                     >
                       {industry.name}
@@ -314,9 +308,9 @@ const MobileNavigation = ({
 
           {/* Product */}
           <div className="mb-1">
-            <Link 
-              to="/product" 
-              onClick={handleMenuItemClick} 
+            <Link
+              to="/product"
+              onClick={handleMenuItemClick}
               className={`block px-5 py-3 font-medium transition-colors touch-target ${isActive("/product") ? 'text-[#14539a] bg-[#14539a]/10 border-r-2 border-[#14539a]' : 'text-white hover:bg-white/10'}`}
             >
               Product
@@ -336,9 +330,9 @@ const MobileNavigation = ({
                 {aboutUsLinks.map((link, index) => (
                   <li key={index} className="list-none">
                     {link.external ? (
-                      <a 
-                        href={link.path} 
-                        target="_blank" 
+                      <a
+                        href={link.path}
+                        target="_blank"
                         rel="noopener noreferrer"
                         onClick={onToggle}
                         className="block px-7 py-2 text-sm transition-colors touch-target text-gray-300 hover:text-white hover:bg-white/5"
@@ -346,9 +340,9 @@ const MobileNavigation = ({
                         {link.label}
                       </a>
                     ) : (
-                      <Link 
-                        to={link.path} 
-                        onClick={onToggle} 
+                      <Link
+                        to={link.path}
+                        onClick={onToggle}
                         className={`block px-7 py-2 text-sm transition-colors touch-target ${isActive(link.path) ? 'text-[#14539a] bg-[#14539a]/10 border-r-2 border-[#14539a]' : 'text-gray-300 hover:text-white hover:bg-white/5'}`}
                       >
                         {link.label}
@@ -362,15 +356,15 @@ const MobileNavigation = ({
 
           {/* Resources */}
           <div className="mb-1">
-            <Link 
-              to="/resources" 
-              onClick={handleResourcesClick} 
+            <Link
+              to="/resources"
+              onClick={handleResourcesClick}
               className={`block px-5 py-3 font-medium transition-colors touch-target ${isActive("/resources") ? 'text-[#14539a] bg-[#14539a]/10 border-r-2 border-[#14539a]' : 'text-white hover:bg-white/10'}`}
             >
               Resources
             </Link>
           </div>
-          
+
           {/* Mobile-specific contact button only */}
           <div className="px-6 pt-6 border-t border-gray-800 mt-4 flex flex-col gap-3">
             <Link to="/contact?source=mobile-menu" onClick={onToggle}>

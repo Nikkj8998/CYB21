@@ -323,6 +323,11 @@ const Header = () => {
               hash: "asset-configuration-management",
             },
             { name: "Knowledge Base Setup", hash: "knowledge-base-setup" },
+
+            {
+              name: "Managed IT Support India",
+              path: "/managed-it-support",
+            },
           ],
         },
         column2: {
@@ -357,11 +362,6 @@ const Header = () => {
             {
               name: "Regulatory Compliance (PCI-DSS, SOC 2, etc.)",
               hash: "regulatory-compliance",
-            },
-
-            {
-              name: "Managed IT Support India",
-              path: "/managed-it-support",
             },
           ],
         },
@@ -694,19 +694,17 @@ const Header = () => {
                                     typeof service === "string"
                                       ? service
                                       : (service as any).name;
-                                  const servicePath =
+                                  const serviceHash =
                                     typeof service === "string"
-                                      ? `${activeCategory.path}#${service
+                                      ? service
                                         .toLowerCase()
                                         .replace(/[^a-z0-9]+/g, "-")
-                                        .replace(/(^-|-$)/g, "")}`
-                                      : (service as any).path ||
-                                      `${activeCategory.path}#${(service as any).hash}`;
-
+                                        .replace(/(^-|-$)/g, "")
+                                      : (service as any).hash;
                                   return (
                                     <Link
                                       key={index}
-                                      to={servicePath}
+                                      to={`${activeCategory.path}#${serviceHash}`}
                                       onClick={handleMenuItemClick}
                                       className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
                                     >
@@ -717,43 +715,29 @@ const Header = () => {
                               )}
                             </div>
                           </div>
-                          {activeCategory.threeColumnServices.column4 && (
-                            <div>
-                              <h4 className="text-xs font-semibold text-gray-800 mb-2">
-                                {
-                                  activeCategory.threeColumnServices.column4
-                                    .title
-                                }
-                              </h4>
-                              <div className="space-y-1">
-                                {activeCategory.threeColumnServices.column4.items.map(
-                                  (service: any, index: number) => (
-                                    <Link
-                                      key={index}
-                                      to={service.path}
-                                      onClick={handleMenuItemClick}
-                                      className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
-                                    >
-                                      {service.name}
-                                    </Link>
-                                  ),
-                                )}
-                              </div>
-                            </div>
-                          )}
                         </div>
                       ) : (
                         <div className="grid grid-cols-2 gap-x-8 gap-y-2">
-                          {activeCategory.services.map((service, index) => (
-                            <Link
-                              key={index}
-                              to={`${activeCategory.path}#${service.hash}`}
-                              onClick={handleMenuItemClick}
-                              className="text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
-                            >
-                              {service.name}
-                            </Link>
-                          ))}
+                          {activeCategory.services.map((service, index) => {
+                            const serviceName =
+                              typeof service === "string"
+                                ? service
+                                : service.name;
+                            const serviceHash =
+                              typeof service === "string"
+                                ? ""
+                                : `#${service.hash}`;
+                            return (
+                              <Link
+                                key={index}
+                                to={`${activeCategory.path}${serviceHash}`}
+                                onClick={handleMenuItemClick}
+                                className="text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
+                              >
+                                {serviceName}
+                              </Link>
+                            );
+                          })}
                         </div>
                       )}
                       <div className="mt-4 pt-4 border-t border-gray-100">
