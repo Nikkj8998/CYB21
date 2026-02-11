@@ -127,30 +127,36 @@ const EmailManagement = () => {
 
                 <div className="relative z-10 text-center px-6 max-w-7xl mx-auto">
                     <div className={`transition-all duration-1000 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
-                        <Badge className="mb-6 px-4 py-1.5 bg-blue-500/10 text-blue-400 border-blue-500/20 text-sm uppercase tracking-wider font-semibold backdrop-blur-md">
-                            Professional Email Management for Indian Businesses
-                        </Badge>
-                        <h1 className="main-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-balance leading-tight px-4 tracking-tight overflow-hidden">
-                            <span className={`line line-first text-white block transition-all duration-700 delay-300 ${heroInView ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"}`}>
+                        <div className={`transition-all duration-1000 delay-100 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+                            <Badge className="mb-6 px-4 py-1.5 bg-blue-500/10 text-blue-400 border-blue-500/20 text-sm uppercase tracking-wider font-semibold backdrop-blur-md">
+                                Professional Email Management for Indian Businesses
+                            </Badge>
+                        </div>
+                        <h1 className="main-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-balance leading-tight px-4 tracking-tight">
+                            <span className="line line-first text-white block opacity-100 translate-y-0">
                                 ENTERPRISE-GRADE
                             </span>
-                            <span className={`line line-second text-blue-400 mt-4 md:mt-5 block drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] transition-all duration-700 delay-500 ${heroInView ? "translate-y-0 opacity-100" : "translate-y-full opacity-0"}`}>
+                            <span className="line line-second text-blue-400 mt-4 md:mt-5 block drop-shadow-[0_0_15px_rgba(59,130,246,0.5)] opacity-100 translate-y-0">
                                 EMAIL OPERATIONS
                             </span>
                         </h1>
-                        <p className="text-[clamp(1.1rem,2vw,1.25rem)] leading-relaxed text-slate-400 max-w-3xl mx-auto mb-12 font-light">
-                            Cybaem Tech provides enterprise-grade Email Support, Email Migration, and Email Monitoring services in India for organizations with 10–100+ users.
-                        </p>
-                        <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                            <Link to="/contact">
-                                <Button size="lg" className="px-10 py-7 text-lg font-bold rounded-2xl bg-blue-600 hover:bg-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all transform hover:scale-105 active:scale-95 group">
-                                    Get Free Consultation
-                                    <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
-                                </Button>
-                            </Link>
-                            <div className="flex items-center gap-4 text-slate-500 text-sm font-medium">
-                                <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-blue-500" /> Microsoft 365</span>
-                                <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-blue-500" /> Google Workspace</span>
+                        <div className={`transition-all duration-1000 delay-700 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+                            <p className="text-[clamp(1.1rem,2vw,1.25rem)] leading-relaxed text-slate-400 max-w-3xl mx-auto mb-12 font-light">
+                                Cybaem Tech provides enterprise-grade Email Support, Email Migration, and Email Monitoring services in India for organizations with 10–100+ users.
+                            </p>
+                        </div>
+                        <div className={`transition-all duration-1000 delay-900 ${heroInView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-20"}`}>
+                            <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                                <Link to="/contact">
+                                    <Button size="lg" className="px-10 py-7 text-lg font-bold rounded-2xl bg-blue-600 hover:bg-blue-500 shadow-[0_0_30px_rgba(37,99,235,0.4)] transition-all transform hover:scale-105 active:scale-95 group">
+                                        Get Free Consultation
+                                        <ArrowRight className="ml-3 w-6 h-6 group-hover:translate-x-1 transition-transform" />
+                                    </Button>
+                                </Link>
+                                <div className="flex items-center gap-4 text-slate-500 text-sm font-medium">
+                                    <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-blue-500" /> Microsoft 365</span>
+                                    <span className="flex items-center gap-1.5"><ShieldCheck className="w-4 h-4 text-blue-500" /> Google Workspace</span>
+                                </div>
                             </div>
                         </div>
                     </div>
