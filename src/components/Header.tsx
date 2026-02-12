@@ -499,8 +499,8 @@ const Header = () => {
                               setActiveServiceCategory(category.id)
                             }
                             className={`flex items-center justify-between px-3 py-2 rounded-md cursor-pointer transition-colors no-underline ${activeServiceCategory === category.id
-                                ? "bg-[#14539a] text-white"
-                                : "text-gray-700 hover:bg-gray-100"
+                              ? "bg-[#14539a] text-white"
+                              : "text-gray-700 hover:bg-gray-100"
                               }`}
                           >
                             <div className="flex items-center gap-2.5">
@@ -537,17 +537,18 @@ const Header = () => {
                                     typeof service === "string"
                                       ? service
                                       : (service as any).name;
-                                  const serviceHash =
+                                  const servicePath =
                                     typeof service === "string"
-                                      ? service
+                                      ? `${activeCategory.path}#${service
                                         .toLowerCase()
                                         .replace(/[^a-z0-9]+/g, "-")
-                                        .replace(/(^-|-$)/g, "")
-                                      : (service as any).hash;
+                                        .replace(/(^-|-$)/g, "")}`
+                                      : (service as any).path ||
+                                      `${activeCategory.path}#${(service as any).hash}`;
                                   return (
                                     <Link
                                       key={index}
-                                      to={`${activeCategory.path}#${serviceHash}`}
+                                      to={servicePath}
                                       onClick={handleMenuItemClick}
                                       className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
                                     >
@@ -569,17 +570,18 @@ const Header = () => {
                                     typeof service === "string"
                                       ? service
                                       : (service as any).name;
-                                  const serviceHash =
+                                  const servicePath =
                                     typeof service === "string"
-                                      ? service
+                                      ? `${activeCategory.path}#${service
                                         .toLowerCase()
                                         .replace(/[^a-z0-9]+/g, "-")
-                                        .replace(/(^-|-$)/g, "")
-                                      : (service as any).hash;
+                                        .replace(/(^-|-$)/g, "")}`
+                                      : (service as any).path ||
+                                      `${activeCategory.path}#${(service as any).hash}`;
                                   return (
                                     <Link
                                       key={index}
-                                      to={`${activeCategory.path}#${serviceHash}`}
+                                      to={servicePath}
                                       onClick={handleMenuItemClick}
                                       className="block text-xs text-gray-600 hover:text-[#14539a] hover:bg-gray-100 transition-colors py-1.5 px-2 rounded-md"
                                     >
