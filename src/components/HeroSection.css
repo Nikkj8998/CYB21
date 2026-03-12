@@ -75,10 +75,9 @@
 /* ─── Headline ───────────────────────────────────────── */
 .hero-h1 {
   font-size: clamp(2.6rem, 7vw, 5.25rem);
-  font-weight: 800;
-  line-height: 1.08;
+  font-weight: 700;
+  line-height: 1.15;
   color: #fff;
-  letter-spacing: -.02em;
   margin-bottom: 1.1rem;
   animation: fadeDown .55s ease .08s both;
 }
