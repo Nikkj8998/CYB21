@@ -88,14 +88,6 @@ const HeroSection = () => {
         </div>
       </div>
 
-      {/* Animated Directional Arrows */}
-      <div className="arrow-container">
-        <div className="arrow arrow-1"></div>
-        <div className="arrow arrow-2"></div>
-        <div className="arrow arrow-3"></div>
-        <div className="arrow arrow-4"></div>
-      </div>
-
       {/* Additional Service Icon */}
       <div className="pulse-circle flex items-center justify-center">
         <Code className="w-12 h-12 md:w-16 md:h-16 text-accent/70" strokeWidth={1.5} />
