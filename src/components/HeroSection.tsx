@@ -1,12 +1,10 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Cloud, Shield, Megaphone, Code, Server, Lock } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import { useEffect, useRef, useMemo } from "react";
+import { useMemo } from "react";
 import "./HeroSection.css";
 
 const HeroSection = () => {
-  const shapesRef = useRef<(HTMLDivElement | null)[]>([]);
-
   const particles = useMemo(() => {
     return Array.from({ length: 50 }, (_, i) => ({
       id: i,
@@ -14,35 +12,6 @@ const HeroSection = () => {
       delay: Math.random() * 15,
       duration: Math.random() * 10 + 10,
     }));
-  }, []);
-
-  useEffect(() => {
-    let rafId: number;
-    
-    const handleMouseMove = (e: MouseEvent) => {
-      if (rafId) cancelAnimationFrame(rafId);
-      
-      rafId = requestAnimationFrame(() => {
-        const mouseX = e.clientX / window.innerWidth;
-        const mouseY = e.clientY / window.innerHeight;
-        
-        shapesRef.current.forEach((shape, index) => {
-          if (shape) {
-            const speed = (index + 1) * 0.5;
-            const x = (mouseX - 0.5) * speed * 20;
-            const y = (mouseY - 0.5) * speed * 20;
-            shape.style.transform = `translate(${x}px, ${y}px)`;
-          }
-        });
-      });
-    };
-
-    document.addEventListener('mousemove', handleMouseMove);
-    
-    return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
-      if (rafId) cancelAnimationFrame(rafId);
-    };
   }, []);
 
   return (
@@ -65,31 +34,13 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Service Icons with Parallax */}
-      <div className="geometric-bg">
-        <div 
-          ref={(el) => shapesRef.current[0] = el}
-          className="geo-shape geo-shape-1 flex items-center justify-center"
-        >
-          <Cloud className="w-24 h-24 md:w-32 md:h-32 text-accent/80" strokeWidth={1.5} />
-        </div>
-        <div 
-          ref={(el) => shapesRef.current[1] = el}
-          className="geo-shape geo-shape-2 flex items-center justify-center"
-        >
-          <Shield className="w-20 h-20 md:w-24 md:h-24 text-primary/80" strokeWidth={1.5} />
-        </div>
-        <div 
-          ref={(el) => shapesRef.current[2] = el}
-          className="geo-shape geo-shape-3 flex items-center justify-center"
-        >
-          <Megaphone className="w-16 h-16 md:w-20 md:h-20 text-accent/80" strokeWidth={1.5} />
-        </div>
-      </div>
-
-      {/* Additional Service Icon */}
-      <div className="pulse-circle flex items-center justify-center">
-        <Code className="w-12 h-12 md:w-16 md:h-16 text-accent/70" strokeWidth={1.5} />
+      {/* Blue Fog Background Blurs */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/30 rounded-full blur-2xl animate-pulse"></div>
+        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-accent/20 rounded-full blur-xl animate-spin" style={{animationDuration: '20s'}}></div>
+        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-accent/25 rounded-full blur-2xl animate-bounce" style={{animationDuration: '15s'}}></div>
+        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-accent/20 rounded-full blur-xl animate-pulse" style={{animationDuration: '25s'}}></div>
+        <div className="absolute bottom-1/3 right-1/4 w-56 h-56 bg-accent/35 rounded-full blur-2xl animate-spin" style={{animationDuration: '30s', animationDirection: 'reverse'}}></div>
       </div>
 
       {/* Main Content */}
