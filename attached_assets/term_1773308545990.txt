@@ -1,0 +1,21 @@
+Content:
+Terms of Service – Cybaem Tech Private Limited
+Welcome to Cybaem Tech Private Limited. By using our services, you agree to the following terms and conditions.
+1. Services
+Cybaem Tech Private Limited provides IT services including software development, website development, cloud services, IT infrastructure setup, cybersecurity services, managed IT services, domain registration, hosting services, and technical consulting.
+2. Service Agreement
+All services provided by Cybaem Tech are based on mutually agreed proposals, quotations, or service contracts.
+3. Payments
+Payments must be made as per the invoice or agreement terms. For project-based services, advance payments may be required before the start of work.
+4. Delivery
+Project timelines depend on scope, client inputs, and technical requirements. Delays caused by client-side approvals or data submission may affect timelines.
+5. Intellectual Property
+All developed software, websites, or solutions will be delivered to the client as per the agreed contract terms after completion of payment.
+6. Limitation of Liability
+Cybaem Tech shall not be liable for any indirect, incidental, or consequential damages arising from the use of services.
+7. Modifications
+Cybaem Tech reserves the right to modify these terms at any time.
+8. Contact Information
+Cybaem Tech Private Limited
+Email: info@cybaemtech.com
+Website: https://cybaemtech.com
