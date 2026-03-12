@@ -28,6 +28,7 @@ import BlogPost from "./components/BlogPost";
 import ThankYou from "./components/ThankYou";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsOfService from "./pages/TermsOfService";
+import RefundCancellationPolicy from "./pages/RefundCancellationPolicy";
 import Resources from "./pages/Resources";
 import Product from "./pages/Product";
 import Agile from "./pages/Agile";
@@ -105,6 +106,7 @@ const App = () => (
               <Route path="/resources" element={<Resources />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms-of-service" element={<TermsOfService />} />
+              <Route path="/refund-cancellation-policy" element={<RefundCancellationPolicy />} />
               <Route path="/hero-section" element={<HeroSection />} />
               <Route path="/intro-section" element={<IntroSection />} />
               <Route path="/services-section" element={<ServicesSection />} />

@@ -147,6 +147,12 @@ const Footer = () => (
           >
             Cookie Policy
           </a>
+          <a
+            href="/refund-cancellation-policy"
+            className="text-gray-500 hover:text-primary transition-colors touch-target"
+          >
+            Refund & Cancellation Policy
+          </a>
         </div>
       </div>
     </div>
