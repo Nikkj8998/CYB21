@@ -134,16 +134,6 @@ const HeroSection = () => {
       <div className="relative z-10 flex items-center justify-center min-h-screen pt-16 md:pt-20 pb-8 md:pb-12">
         <div className="container text-center max-w-6xl mx-auto mobile-padding">
           <div className="animate-fade-in">
-            {/* Main Headline with Animations */}
-            <h1 className="main-heading text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6 md:mb-8 text-balance leading-tight px-4">
-              <span className="line line-first text-white">
-                INNOVATE. SECURE.
-              </span>
-              <span className="line line-second text-accent mt-4 md:mt-5">
-                SCALE!
-              </span>
-            </h1>
-
             {/* Tagline */}
             <div className="max-w-3xl mx-auto mb-8 md:mb-10 hero-description px-4">
               <p className="text-base md:text-lg lg:text-xl text-white/80 leading-relaxed">
