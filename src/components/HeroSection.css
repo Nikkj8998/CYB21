@@ -301,11 +301,9 @@
 }
 
 .line-first {
-  animation: slideInFromLeft 1.5s ease-out 0.5s both;
 }
 
 .line-second {
-  animation: slideInFromRight 1.5s ease-out 1s both;
 }
 
 @keyframes slideInFromLeft {
