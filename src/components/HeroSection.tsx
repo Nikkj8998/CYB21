@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Cloud, Shield, Megaphone, Code, Server, Lock } from "lucide-react";
-import { SiFacebook, SiX, SiLinkedin, SiInstagram, SiWhatsapp, SiYoutube } from "react-icons/si";
 import { Link } from "react-router-dom";
 import { useEffect, useRef, useMemo } from "react";
 import "./HeroSection.css";
@@ -93,35 +92,6 @@ const HeroSection = () => {
         <Code className="w-12 h-12 md:w-16 md:h-16 text-accent/70" strokeWidth={1.5} />
       </div>
 
-      {/* Social Media Icons with Heartbeat Animation */}
-      <div className="pulse-circle pulse-social-1 flex items-center justify-center">
-        <SiFacebook className="w-10 h-10 md:w-14 md:h-14 text-accent/70" />
-      </div>
-      <div className="pulse-circle pulse-social-2 flex items-center justify-center">
-        <SiX className="w-10 h-10 md:w-14 md:h-14 text-primary/70" />
-      </div>
-      <div className="pulse-circle pulse-social-3 flex items-center justify-center">
-        <SiLinkedin className="w-10 h-10 md:w-14 md:h-14 text-accent/70" />
-      </div>
-      <div className="pulse-circle pulse-social-4 flex items-center justify-center">
-        <SiInstagram className="w-10 h-10 md:w-14 md:h-14 text-primary/70" />
-      </div>
-      <div className="pulse-circle pulse-social-5 flex items-center justify-center">
-        <SiWhatsapp className="w-10 h-10 md:w-14 md:h-14 text-accent/70" />
-      </div>
-      <div className="pulse-circle pulse-social-6 flex items-center justify-center">
-        <SiYoutube className="w-10 h-10 md:w-14 md:h-14 text-primary/70" />
-      </div>
-      
-      {/* Existing Animated Background Blurs */}
-      <div className="absolute inset-0 z-0">
-        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-accent/30 rounded-full blur-2xl animate-pulse"></div>
-        <div className="absolute top-1/3 right-1/3 w-64 h-64 bg-primary/40 rounded-full blur-xl animate-spin" style={{animationDuration: '20s'}}></div>
-        <div className="absolute bottom-1/4 left-1/3 w-80 h-80 bg-accent/25 rounded-full blur-2xl animate-bounce" style={{animationDuration: '15s'}}></div>
-        <div className="absolute top-1/2 left-1/2 w-72 h-72 bg-primary/30 rounded-full blur-xl animate-pulse" style={{animationDuration: '25s'}}></div>
-        <div className="absolute bottom-1/3 right-1/4 w-56 h-56 bg-accent/35 rounded-full blur-2xl animate-spin" style={{animationDuration: '30s', animationDirection: 'reverse'}}></div>
-      </div>
-      
       {/* Main Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen pt-16 md:pt-20 pb-8 md:pb-12">
         <div className="container text-center max-w-6xl mx-auto mobile-padding">
